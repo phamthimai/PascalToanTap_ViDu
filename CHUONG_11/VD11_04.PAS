@@ -1,0 +1,61 @@
+Program Bien_Khong_Tuong_minh;
+	TYPE
+   	Ly_Lich = RECORD
+      	Ma_so: Integer;
+         HoLot :String[17];
+         Ten:String[7];
+         Ngay_sinh: 1..31;
+			Thang_sinh:1..12;
+			Nam_sinh:1900..2000;
+         QueQuan,Diachi:String[20];
+         Donvi,Chucvu:String[15];
+         Luong:Real;
+         Giadinh:String[5];
+      END;
+   VAR
+   	NV:Ly_lich;
+Begin
+	Writeln('KHAI BAO BIEN KHONG TUONG MINH');
+   Writeln('NHAP DU LIEU TU BAN PHIM');
+   Writeln('------------------------------');
+   Write('-Ma so nhan vien: ');
+	Readln(Nv.ma_so);
+   Write('-Holot: ');
+   Readln(Nv.holot);
+   Write('-Ten: ');
+   Readln(Nv.Ten);
+   Write('-Ngay sinh: ');
+   Readln(Nv.Ngay_sinh);
+   Write('-Thang sinh: ');
+   Readln(Nv.Thang_sinh);
+   Write('-Nam sinh: ');
+   Readln(Nv.Nam_sinh);
+   Write('-Que quan: ');
+   Readln(Nv.Quequan);
+   Write('-Dia chi: ');
+   Readln(Nv.Diachi);
+	Write('-Don vi: ');
+   Readln(Nv.Donvi);
+   Write('-Chuc vu: ');
+   Readln(Nv.Chucvu);
+   Write('-Bac luong: ');
+   Readln(Nv.Luong);
+   Write('-Da co gia dinh chua: ');
+   Readln(Nv.Giadinh);
+   Writeln;
+   Writeln('XUAT DU LIEU RA MAN HINH');
+   Writeln('------------------------');
+   Writeln('+Ma so nhan vien: ',Nv.ma_so);
+ 	Writeln('+Holot: ',Nv.holot);
+  	Writeln('+Ten: ',Nv.Ten);
+  	Writeln('+Ngay sinh: ',Nv.Ngay_sinh);
+  	Writeln('+Thang sinh: ',Nv.Thang_sinh);
+   Writeln('+Nam sinh: ',Nv.Nam_sinh);
+ 	Writeln('+Que quan: ',Nv.Quequan);
+  	Writeln('+Dia chi: ',Nv.Diachi);
+  	Writeln('+Don vi: ',Nv.Donvi);
+  	Writeln('+Chuc vu: ',Nv.Chucvu);
+  	Writeln('+Bac luong: ',Nv.Luong:8:2);
+  	Writeln('+Da co gia dinh chua: ',Nv.Giadinh);
+   Readln;
+End.
