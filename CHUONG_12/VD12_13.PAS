@@ -1,0 +1,50 @@
+Program Thu_Tuc_FreeMem_Dispose;
+VAR
+   p1       : ^Integer;
+   p2       : ^String;
+   p3       : ^Real;
+   k        : Word;
+Begin
+	Writeln('THU TUC FREEMEM VA DISPOSE');
+   Writeln('--------------------------');
+   Writeln('-Khi moi bat dau chuong trinh thi');
+   Writeln('Vung nho Heap con: ',MemAvail,' bytes trong');
+   Writeln;
+   New(p1);
+   P1^ :=12345;
+   Writeln('-Noi dung cua bien dong P1 la: ',P1^);
+   Writeln('-Sau khi cap phat bo nho cho bien dong P1 (kieu Integer)');
+   Writeln('Vung nho Heap con: ',MemAvail,' bytes trong');
+   Writeln;
+   k := Sizeof(p2^);
+   GetMem(p2,Sizeof(p2^));
+   P2^ :='Nha sach Minh Khai, 249 Nguyen Thi Minh Khai, Q1, Tel 8.331.124';
+   Writeln('-Noi dung cua bien dong P2 la: ',P2^);
+   Writeln('-Sau khi cap phat bo nho cho bien dong P2 (kieu String)');
+   Writeln('Vung nho Heap con: ',MemAvail,' bytes trong');
+   Writeln;
+	New(p3);
+   Writeln('-Sau khi cap phat bo nho cho bien dong P3 (kieu Real)');
+   Writeln('Vung nho Heap con: ',MemAvail,' bytes trong');
+   Writeln;
+   Writeln('+   Bam phim <Enter> de xoa bien P1 bang thu tuc Dispose');
+   Readln;
+   Dispose(p1);
+   Writeln('-Sau khi Xoa cac bien dong P1 (kieu Integer) ');
+   Writeln('Vung nho Heap bay gio la: ',MemAvail,' bytes trong');
+   Writeln;
+   Writeln('+   Bam phim <Enter> de xoa bien P2 bang thu tuc FreeMem');
+   Readln;
+   Freemem(p2,k);
+   Writeln('-Sau khi Xoa cac bien dong P2 (kieu String) ');
+   Writeln('Vung nho Heap bay gio la: ',MemAvail,' bytes trong');
+   Writeln;
+   Writeln('+   Bam phim <Enter> de xoa bien P3 bang thu tuc Dispose');
+   Readln;
+   Dispose(p3);
+   Writeln('-Sau khi Xoa cac bien dong P1 (kieu Integer) ');
+   Writeln('Vung nho Heap bay gio la: ',MemAvail,' bytes trong');
+   Writeln;
+   Writeln('      Bam phim <Enter> de ket thuc ');
+   Readln
+End.
