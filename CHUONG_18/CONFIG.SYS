@@ -1,0 +1,4 @@
+files=60
+Buffers=30
+device=oakcdrom.sys /d:mscd001
+switches=/f
