@@ -1,0 +1,46 @@
+Program Thu_tuc_chuan;
+Uses Crt;
+Var
+    so1,so2,tong,hieu,tich:Integer;
+   thuong:Real;
+Begin
+    ClrScr;
+   TextColor(Red);
+   TextBackGround(Black);
+   Writeln('SU DUNG CAC THU TUC CHUAN');
+   TextColor(Yellow);
+   TextBackGround(Blue);
+   Write('-Nhap so thu nhat: ');
+   Readln(so1);
+   TextColor(Green);
+   TextBackGround(White);
+   Write('-Nhap so thu hai: ');
+   Readln(so2);
+   ClrScr;
+   TextColor(Magenta);
+   TextBackGround(Black);
+   GotoXY(31,10);
+   Writeln('KET QUA TINH TOAN');
+   GotoXY(25,12);
+   TextColor(Cyan);
+   TextBackGround(Black);
+   Writeln('+Tong cua 2 so ',so1,' va ',so2,' = ',so1+so2);
+   GotoXY(25,13);
+   TextColor(Red);
+   TextBackGround(Black);
+   Writeln('+Hieu cua 2 so ',so1,' va ',so2,' = ',so1-so2);
+   GotoXY(25,14);
+   TextColor(Yellow);
+   TextBackGround(Black);
+   Writeln('+Tich cua 2 so ',so1,' va ',so2,' = ',so1*so2);
+   GotoXY(25,15);
+   TextColor(Green);
+   TextBackGround(Black);
+   Writeln('+Thuong cua 2 so ',so1,' va ',so2,' = ',so1/so2:6:2);
+   GotoXY(26,22);
+   TextColor(Red);
+   TextBackGround(Black);
+   Writeln('Bam phim <Enter> de ket thuc');
+   Readln;
+   ClrScr;
+End.

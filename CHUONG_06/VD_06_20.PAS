@@ -1,0 +1,44 @@
+Program Thuoc_tinh_mau;
+Uses Crt;
+Begin
+     ClrScr;
+	TextColor(Green);
+   TextBackGround(Black);
+   Writeln('-Chu mau xanh la cay tren nen den');
+   TextColor(LightBlue);
+   TextBackGround(White);
+   Writeln('-Chu mau xanh duong nhat tren nen trang');
+   TextColor(LightRed);
+   TextBackGround(Blue);
+   Writeln('-Chu mau do tuoi tren nen xanh duong');
+   TextColor(Cyan);
+   TextBackGround(Black);
+   Writeln('-Chu mau xanh Cyan tren nen den');
+   TextColor(Magenta);
+   TextBackGround(Black);
+   Writeln('-Chu mau do tim tren nen den');
+   TextColor(Yellow);
+   TextBackGround(Black);
+   Writeln('-Chu mau vang tren nen den');
+   TextColor(White);
+   TextBackGround(Blue);
+   Writeln('-Chu mau trang tren nen xanh duong');
+   TextColor(Brown);
+   TextBackGround(Black);
+   Writeln('-Chu mau nau tren nen den');
+   Writeln;
+   TextColor(Red);
+   Write('Bam phim <Enter> de lam loang mau trang ra toan man hinh');
+   Readln;
+   TextBackGround(White);
+   ClrScr;
+   TextColor(Black);
+   Writeln('Bam phim <Enter> de khoi phuc lai mau chu va mau nen');
+   Writeln('Chu mau vang tren nen xanh duong');
+   Readln;
+   TextColor(Yellow);
+   TextBackGround(Blue);
+   ClrScr;
+   Writeln('     Bam phim <Enter> de ket thuc');
+   Readln
+End.
